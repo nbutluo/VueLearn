@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.5.17/vue.global.prod.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li>{{name}}</li>
+            <li>{{age}}</li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    const  app = Vue.createApp({
+        data() {
+            return {
+                name: "VueLearn2",
+                age: 26
+            }
+        }
+    })
+
+    app.mount('#app')
+</script>
+</html>
