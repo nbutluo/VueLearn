@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.5.17/vue.global.prod.js"></script>
+</head>
+<body>
+<div id="app">
+    <div v-html="htmlfile"></div>
+</div>
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                name: "父组件",
+                htmlfile: `<div style="color: red">houdunren.com</div>`
+            }
+        },
+        // template: `<h2>{{name}}-<xj/></h2>`
+    })
+
+    const vm = app.mount("#app")
+    console.log(vm)
+
+    setTimeout(() => {
+        vm.$data.name = '替换后的数据'
+    }, 3000)
+</script>
+</body>
+</html>
