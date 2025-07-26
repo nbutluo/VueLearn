@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.5.17/vue.global.prod.js"></script>
+</head>
+<body>
+<div id="app"></div>
+
+</body>
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                name: "这是根组件"
+            }
+        },
+        template: `<h2 style="color: blue">{{ name }}--<zj/></h2>`
+    })
+
+    app.component("zj", {
+        data() {
+            return {
+                name: "这是自定义组件"
+            }
+        },
+        template: `<h2 >{{name}}</h2>`
+
+    })
+
+    const vm = app.mount("#app")
+    console.log(vm)
+</script>
+</html>

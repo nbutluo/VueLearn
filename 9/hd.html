@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.5.17/vue.global.prod.js"></script>
+</head>
+<body>
+<div id="app">
+</div>
+</body>
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                name:"根组件41"
+            }
+        },
+        template: `<h2>{{name}}--<xj/></h2>`
+    })
+
+    app.component("Xj",{
+        data() {
+            return {
+                name: "向军大叔"
+            };
+        },
+        template: `<h2 style="color: aquamarine">{{name}}</h2>`
+    })
+
+    const vm = app.mount("#app")
+</script>
+</html>
