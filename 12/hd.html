@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.0-beta.7/vue.global.prod.js"></script>
+
+
+</head>
+<body>
+<div id="app">
+
+    <a href="https://www.baidu.com" @click.prevent="go($event,'向军')">{{name}}</a>
+    <button @click="desc">减少</button>
+    {{num}}
+    <button @click="add">增加</button>
+    <div style="color: red">{{error}}</div>
+</div>
+
+
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                name: "向军",
+                num: 0,
+                error:''
+            }
+        },
+        methods: {
+            desc(event) {
+                if (this.num > 0) {
+                    this.num--
+                } else  {
+                    this.error ="不能小于0"
+                }
+            },
+            add(event) {
+                if (this.num<10) {
+                    this.num++
+                }else  {
+                    this.error ="不能大于10"
+                }
+            },
+            go(event, title) {
+                alert(title)
+                // event.preventDefault()
+            },
+        }
+    })
+
+    const vm = app.mount("#app")
+</script>
+</body>
+</html>
