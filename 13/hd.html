@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.5.17/vue.global.prod.js"></script>
+</head>
+<body>
+<div id="app">
+    <h2>{{name}}</h2>
+    <button @click="desc">减少</button>
+    {{num}}
+    <button @click="add">增加</button>
+    <div style="background-color: red;color: aliceblue" v-if="error">{{error}}</div>
+
+</div>
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                num: 1,
+                name: "后盾人"
+            }
+        },
+        methods: {
+            add(event) {
+                if (this.num < 10) {
+                    this.num++
+                }
+            },
+            desc(event) {
+                if (this.num > 0) {
+                    this.num--
+                }
+            },
+
+        },
+        computed: {
+            error() {
+                const message = this.num == 0 ? '不能小于0' : this.num == 10 ? '不能大于10' : '';
+
+                if (message) {
+                    return message;
+                }
+            }
+        }
+    })
+
+    const vm = app.mount("#app")
+</script>
+</body>
+</html>
