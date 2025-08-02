@@ -1,14 +1,18 @@
 <script>
 import ClassComponent from "./components/classComponent.vue";
+import LessonList from "./components/LessonList.vue";
+import styleComponents from "./components/styleComponents.vue";
 
 export default {
-  components: {ClassComponent},
+  components: {LessonList, ClassComponent, styleComponents},
 }
 
 </script>
 
 <template>
-  <classComponent />
+  <!--  <class-component />-->
+  <!--  <LessonList/>-->
+  <style-components class="hd" />
 </template>
 
 <style scoped>
@@ -18,9 +22,11 @@ export default {
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
