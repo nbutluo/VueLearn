@@ -2,9 +2,10 @@
 import ClassComponent from "./components/classComponent.vue";
 import LessonList from "./components/LessonList.vue";
 import styleComponents from "./components/styleComponents.vue";
+import VifComponent from "./components/vifComponent.vue";
 
 export default {
-  components: {LessonList, ClassComponent, styleComponents},
+  components: {VifComponent, LessonList, ClassComponent, styleComponents},
 }
 
 </script>
@@ -12,7 +13,8 @@ export default {
 <template>
   <!--  <class-component />-->
   <!--  <LessonList/>-->
-  <style-components class="hd" />
+<!--  <style-components class="hd" />-->
+  <vif-component/>
 </template>
 
 <style scoped>
