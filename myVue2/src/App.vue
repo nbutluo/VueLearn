@@ -4,12 +4,14 @@ import LessonList from "./components/LessonList.vue";
 import styleComponents from "./components/styleComponents.vue";
 import VifComponent from "./components/vifComponent.vue";
 import ForComponent from "./components/forComponent.vue";
+import LessonForComponents from "./components/LessonForComponents.vue";
 import EventComponents from "./components/EventComponents.vue";
 import EventFixComponent from "./components/EventFixComponent.vue";
 import KeyComponent from "./components/KeyComponent.vue";
 import InputComponent from "./components/inputComponent.vue";
 
 export default {
+  components: {LessonForComponents, ForComponent, VifComponent, LessonList, ClassComponent, styleComponents},
   components: {
     InputComponent,
     KeyComponent,
@@ -22,6 +24,10 @@ export default {
 <template>
   <!--  <class-component />-->
   <!--  <LessonList/>-->
+  <!--  <style-components class="hd" />-->
+  <!--  <vif-component/>-->
+  <!--  <for-component/>-->
+  <lesson-for-components/>
 <!--  <style-components class="hd" />-->
 <!--  <vif-component/>-->
 <!--  <for-component/>-->

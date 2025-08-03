@@ -3,7 +3,7 @@ export default [
         title: "VUE入门",
         isDelete: false,
         price:110,
-        comment:120
+        comment:115
     },
     {
         title: "Mysql精通",
@@ -15,12 +15,12 @@ export default [
         title: "Linux 入门",
         isDelete: false,
         price:124,
-        comment:67
+        comment:163
     },
     {
         title: "Java 入门",
         isDelete: false,
         price:80,
-        comment:67
+        comment:286
     }
 ]
