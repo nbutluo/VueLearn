@@ -4,9 +4,10 @@ import LessonList from "./components/LessonList.vue";
 import styleComponents from "./components/styleComponents.vue";
 import VifComponent from "./components/vifComponent.vue";
 import ForComponent from "./components/forComponent.vue";
+import EventComponents from "./components/EventComponents.vue";
 
 export default {
-  components: {ForComponent, VifComponent, LessonList, ClassComponent, styleComponents},
+  components: {EventComponents, ForComponent, VifComponent, LessonList, ClassComponent, styleComponents},
 }
 
 </script>
@@ -16,7 +17,8 @@ export default {
   <!--  <LessonList/>-->
 <!--  <style-components class="hd" />-->
 <!--  <vif-component/>-->
-  <for-component/>
+<!--  <for-component/>-->
+  <event-components/>
 </template>
 
 <style scoped>
