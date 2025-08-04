@@ -6,9 +6,11 @@ import VifComponent from "./components/vifComponent.vue";
 import ForComponent from "./components/forComponent.vue";
 import EventComponents from "./components/EventComponents.vue";
 import EventFixComponent from "./components/EventFixComponent.vue";
+import KeyComponent from "./components/KeyComponent.vue";
 
 export default {
   components: {
+    KeyComponent,
     EventFixComponent,
     EventComponents, ForComponent, VifComponent, LessonList, ClassComponent, styleComponents},
 }
@@ -23,6 +25,7 @@ export default {
 <!--  <for-component/>-->
 <!--  <event-components/>-->
   <event-fix-component/>
+  <key-component/>
 </template>
 
 <style scoped>

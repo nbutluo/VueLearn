@@ -1,8 +1,8 @@
 <template>
-  <div @scroll.passive="d1" style="border: 1px solid green;height: 300px; overflow-y: auto">
-    <div @click="d2" style="background-color: red;height: 2000px">d2</div>
+  <div @scroll.self="d1" style="border: 1px solid green;height: 300px; overflow-y: auto">
+    <div @click.alt.exact="d2" style="background-color: red;height: 200px">d2</div>
   </div>
-  <a @click.passive="link" href="http://www.baidu.com" target="_blank">点击跳转到百度</a>
+  <a @click.passive="link" href="https://www.baidu.com" target="_blank">点击跳转到百度</a>
 </template>
 
 <script>
