@@ -4,16 +4,12 @@ import LessonList from "./components/LessonList.vue";
 import styleComponents from "./components/styleComponents.vue";
 import VifComponent from "./components/vifComponent.vue";
 import ForComponent from "./components/forComponent.vue";
-import LessonForComponents from "./components/LessonForComponents.vue";
-import ArrComponent from "./components/ArrComponent.vue";
 import EventComponents from "./components/EventComponents.vue";
 import EventFixComponent from "./components/EventFixComponent.vue";
 import KeyComponent from "./components/KeyComponent.vue";
 import InputComponent from "./components/inputComponent.vue";
 
 export default {
-  components: {ArrComponent, LessonForComponents, ForComponent, VifComponent, LessonList, ClassComponent, styleComponents},
-  components: {LessonForComponents, ForComponent, VifComponent, LessonList, ClassComponent, styleComponents},
   components: {
     InputComponent,
     KeyComponent,
@@ -29,15 +25,9 @@ export default {
   <!--  <style-components class="hd" />-->
   <!--  <vif-component/>-->
   <!--  <for-component/>-->
-  <!--  <lesson-for-components/>-->
-  <arr-component/>
-  <lesson-for-components/>
-<!--  <style-components class="hd" />-->
-<!--  <vif-component/>-->
-<!--  <for-component/>-->
-<!--  <event-components/>-->
-<!--  <event-fix-component/>-->
-<!--  <key-component/>-->
+  <!--  <event-components/>-->
+  <!--  <event-fix-component/>-->
+  <!--  <key-component/>-->
   <input-component/>
 </template>
 
