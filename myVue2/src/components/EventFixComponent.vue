@@ -1,8 +1,8 @@
 <template>
-  <div @click.once="d1" style="background-color:green; width: 600px">
-    <div @click="d2" style="background-color: red;width: 200px">d2</div>
+  <div @scroll.passive="d1" style="border: 1px solid green;height: 300px; overflow-y: auto">
+    <div @click="d2" style="background-color: red;height: 2000px">d2</div>
   </div>
-  <a @click.prevent="link" href="http://www.baidu.com" target="_blank">点击跳转到百度</a>
+  <a @click.passive="link" href="http://www.baidu.com" target="_blank">点击跳转到百度</a>
 </template>
 
 <script>
@@ -16,7 +16,7 @@ export default {
     },
     link(event){
       console.log(event)
-      event.preventDefault();
+      // event.preventDefault();
     }
   }
 }
