@@ -15,15 +15,33 @@
     </label>
     <hr>
     {{ form }}
-    <hr>
-    课程json：
-    {{ lessons }}
+<!--    <hr>-->
+<!--    课程json：-->
+<!--    {{ lessons }}-->
+    <br>
+    ------单选框----
+    <br>
+    <input type="radio" :value="1" v-model="form.sex">男
+    <input type="radio" :value="2" v-model="form.sex">女
+    <br>
+    ------下拉框----
+<!--    <select v-model="form.citys">-->
+<!--      <option value="''">请选择</option>-->
+<!--      <option value="wuhan">武汉</option>-->
+<!--      <option value="xian"> 西安</option>-->
+<!--    </select>-->
+
+    <select v-model="form.citys" multiple>
+      <option value>===请选择城市===</option>
+      <option :value="{name:'北京'}">北京</option>
+      <option :value="{ name: '武汉' }">武汉</option>
+    </select>
   </div>
 </template>
 
 <script>
 
-const form = {title: 'houdunren.com', content: '', 'isPost': false, lessons: []};
+const form = {title: 'houdunren.com', content: '', 'isPost': false, lessons: [],sex:1,citys:'wuhan'};
 
 const lessons = [
   {title: "Linux入门", value: "Linux"},
