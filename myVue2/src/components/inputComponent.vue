@@ -11,13 +11,13 @@
     <hr>
     课程循环
     <label v-for="lesson in lessons" :key="lesson.title">
-      <input type="checkbox" v-model="form.lessons" :value="lesson.value" >{{lesson.title}}
+      <input type="checkbox" v-model="form.lessons" :value="lesson.value">{{ lesson.title }}
     </label>
     <hr>
     {{ form }}
-<!--    <hr>-->
-<!--    课程json：-->
-<!--    {{ lessons }}-->
+    <!--    <hr>-->
+    <!--    课程json：-->
+    <!--    {{ lessons }}-->
     <br>
     ------单选框----
     <br>
@@ -25,23 +25,29 @@
     <input type="radio" :value="2" v-model="form.sex">女
     <br>
     ------下拉框----
-<!--    <select v-model="form.citys">-->
-<!--      <option value="''">请选择</option>-->
-<!--      <option value="wuhan">武汉</option>-->
-<!--      <option value="xian"> 西安</option>-->
-<!--    </select>-->
+    <!--    <select v-model="form.citys">-->
+    <!--      <option value="''">请选择</option>-->
+    <!--      <option value="wuhan">武汉</option>-->
+    <!--      <option value="xian"> 西安</option>-->
+    <!--    </select>-->
 
-    <select v-model="form.citys" multiple>
-      <option value>===请选择城市===</option>
-      <option :value="{name:'北京'}">北京</option>
-      <option :value="{ name: '武汉' }">武汉</option>
-    </select>
+    <!--    <select v-model="form.citys" multiple>-->
+    <!--      <option value>===请选择城市===</option>-->
+    <!--      <option :value="{name:'北京'}">北京</option>-->
+    <!--      <option :value="{ name: '武汉' }">武汉</option>-->
+    <!--    </select>-->
   </div>
+  <br>
+  <input type="text" v-model.lazy="hd"> {{ hd }}
+  <br>
+  <input type="text" v-model.number="number"> {{ number + 10 }}
+  <br>
+  <input type="text" v-model.trim="age">{{age}}
 </template>
 
 <script>
 
-const form = {title: 'houdunren.com', content: '', 'isPost': false, lessons: [],sex:1,citys:'wuhan'};
+const form = {title: 'houdunren.com', content: '', 'isPost': false, lessons: [], sex: 1, citys: 'wuhan'};
 
 const lessons = [
   {title: "Linux入门", value: "Linux"},
@@ -54,6 +60,20 @@ export default {
     return {
       form,
       lessons,
+      hd: '后端人',
+      number: 1,
+      age:'年龄'
+    }
+  },
+  watch: {
+    hd(n) {
+      console.log(n);
+    },
+    number(n) {
+      console.log(n)
+    },
+    age(n) {
+      console.log(n.length)
     }
   },
 }
