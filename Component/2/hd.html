@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../asset/vue.global.js"></script>
+</head>
+<body>
+<div id="app">
+    {{name}}
+
+    <script type="text/x-template" id="hdTemplate">
+        <h2>后盾</h2>
+    </script>
+</div>
+<script>
+    const app = Vue.createApp({
+
+        // data() {
+        //     return {
+        //         name:"张三1"
+        //     }
+        // }
+        template: `<h2>这是根组件--<hd /></h2>`,
+
+    })
+
+    app.component('hd', {
+        template: `<div>子组件<hd-xj /></div>`,
+    })
+
+    app.component('hdXj', {
+        template: '#hdTemplate',
+    });
+
+
+    const vm = app.mount("#app")
+</script>
+</body>
+</html>
+<script setup>
+</script>
+<script setup>
+</script>
