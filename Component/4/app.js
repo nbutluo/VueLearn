@@ -1,14 +1,11 @@
 import Todo from "./Components/Todo.js";
+import db from "./data/db.js";
 
-const app = Vue.createApp({
+export default {
     components:{Todo},
     data() {
         return {
-            title:'后盾人'
+            db
         }
     }
-})
-
-app.mount('#app')
-
-export default app
+}

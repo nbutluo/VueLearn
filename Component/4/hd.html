@@ -10,10 +10,10 @@
 </head>
 <body>
 <div id="app">
-    {{title}}---<todo />
+    <todo v-for="item in db" :data="item"/>
 </div>
 <script type="module">
-    import App from './app.js'
+    import main from "./main.js";
 </script>
 </body>
 </html>
