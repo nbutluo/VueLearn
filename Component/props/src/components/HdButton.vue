@@ -1,5 +1,5 @@
 <template>
-  <div :class="[type]" :style="$attrs.style">
+  <div :class="[type,{disabled}]" :style="$attrs.style">
     {{ content }}
   </div>
   <!--  {{arr}}-->
@@ -14,7 +14,14 @@ export default {
     },
     type: {
       type: String,
-      default: 'info'
+      default: 'info',
+      validator(value) {
+        return ['success','danger','info'].includes(value)
+      }
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
     // arr: {
     //   default() {   // 引用类型的必须使用函数方式定义默认值
@@ -73,5 +80,16 @@ export default {
     opacity: 1;
   }
 
+}
+
+.disabled {
+  background-color: #aaa !important;
+  display: inline-block;
+  color: red;
+  border-radius: 10px;
+  opacity: 1;
+  font-size: 20px;
+  padding: 5px 10px;
+  cursor: default;
 }
 </style>
