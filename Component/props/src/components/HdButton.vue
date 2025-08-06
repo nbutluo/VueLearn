@@ -3,6 +3,8 @@
     <span v-if="hdTip">{{ hdTip }}</span>
     {{ content }}
   </div>
+  <button @click="text ='后盾人'">子组件</button>
+  {{ text }}
   <!--  {{arr}}-->
 </template>
 
@@ -34,6 +36,17 @@ export default {
     //   }
     // }
   },
+  data() {
+    return {
+      text: this.content
+    }
+  },
+  watch: {
+    content(v) {
+      console.log(v)
+      this.text = v;
+    }
+  }
 
 }
 </script>
