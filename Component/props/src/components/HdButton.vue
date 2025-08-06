@@ -1,5 +1,6 @@
 <template>
   <div :class="[type,{disabled}]" :style="$attrs.style">
+    <span v-if="hdTip">{{hdTip}}</span>
     {{ content }}
   </div>
   <!--  {{arr}}-->
@@ -22,6 +23,9 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    },
+    hdTip: {
+      type: String
     }
     // arr: {
     //   default() {   // 引用类型的必须使用函数方式定义默认值
