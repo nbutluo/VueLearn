@@ -16,7 +16,7 @@ export default {
       type: String,
       default: 'info',
       validator(value) {
-        return ['success','danger','info'].includes(value)
+        return ['success', 'danger', 'info'].includes(value)
       }
     },
     disabled: {
