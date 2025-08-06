@@ -1,6 +1,6 @@
 <template>
   <div :class="[type,{disabled}]" :style="$attrs.style">
-    <span v-if="hdTip">{{hdTip}}</span>
+    <span v-if="hdTip">{{ hdTip }}</span>
     {{ content }}
   </div>
   <!--  {{arr}}-->
@@ -11,7 +11,8 @@ export default {
   props: {
     content: {
       type: String,
-      default: '确定'
+      default: '确定',
+      required: true
     },
     type: {
       type: String,
