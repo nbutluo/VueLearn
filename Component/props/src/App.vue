@@ -1,5 +1,5 @@
 <template>
-  <hd-button :content="hdContent" type="success" class="hd" id="xj" style="margin-right: 10px" />
+  <hd-button :content="hdContent" type="success" class="hd" id="xj" style="margin-right: 10px" @click="show"/>
 <!--  <button @click="hdContent ='向军大叔'">父组件</button>-->
   {{hdContent}}
   <hr>
@@ -17,6 +17,11 @@ export default {
   data() {
     return {
       hdContent: '保存提交'
+    }
+  },
+  methods:{
+    show() {
+      alert("测试事件")
     }
   }
 }

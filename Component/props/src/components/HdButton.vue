@@ -4,7 +4,9 @@
       <span v-if="hdTip">{{ hdTip }}</span>
       {{ text }}
     </div>
-    <h2 v-bind="$attrs"> 向军</h2>
+<!--    只有此处是可以接收show点击事件-->
+    <h2 v-bind="$attrs" > 向军</h2>
+    {{$attrs.show}}
   </div>
   <!--  <button @click="text ='后盾人'">子组件</button>-->
   <!--  {{ text }}-->
