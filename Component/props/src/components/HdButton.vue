@@ -1,15 +1,18 @@
 <template>
-  <div :class="[type,{disabled}]" :style="$attrs.style">
-    <span v-if="hdTip">{{ hdTip }}</span>
-    {{ content }}
+  <div>
+    <div :class="[type,{disabled}, $attrs.hd]"  :id="$attrs.id" v-bind="$attrs">
+      <span v-if="hdTip">{{ hdTip }}</span>
+      {{ text }}
+    </div>
   </div>
-  <button @click="text ='后盾人'">子组件</button>
-  {{ text }}
+  <!--  <button @click="text ='后盾人'">子组件</button>-->
+  <!--  {{ text }}-->
   <!--  {{arr}}-->
 </template>
 
 <script>
 export default {
+  inheritAttrs: false,
   props: {
     content: {
       type: String,

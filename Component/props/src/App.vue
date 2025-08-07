@@ -1,6 +1,6 @@
 <template>
-  <hd-button :content="hdContent" type="success" style="margin-right: 10px"/>
-  <button @click="hdContent ='向军大叔'">父组件</button>
+  <hd-button :content="hdContent" type="success" class="hd" id="xj" style="margin-right: 10px" />
+<!--  <button @click="hdContent ='向军大叔'">父组件</button>-->
   {{hdContent}}
   <hr>
 <!--  <hd-button content="删除" type="danger" style="margin-right: 10px"/>-->
