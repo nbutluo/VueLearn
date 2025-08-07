@@ -1,9 +1,10 @@
 <template>
   <div>
-    <div :class="[type,{disabled}, $attrs.hd]"  :id="$attrs.id" v-bind="$attrs">
+    <div :class="[type,{disabled}, $attrs.hd]"  :id="$attrs.id">
       <span v-if="hdTip">{{ hdTip }}</span>
       {{ text }}
     </div>
+    <h2 v-bind="$attrs"> 向军</h2>
   </div>
   <!--  <button @click="text ='后盾人'">子组件</button>-->
   <!--  {{ text }}-->
