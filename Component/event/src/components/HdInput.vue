@@ -7,17 +7,17 @@
 
 <script>
 export default {
-  props: ['value'],
-  emits: ['update:value'],
+  props: ['modelValue'],
+  emits: ['update:modelValue'],
   data() {
     return {
-      content: this.value,
+      content: this.modelValue,
     }
   },
   methods: {
     change(event) {
       this.content = event.target.value;
-      this.$emit('update:value', this.content);
+      this.$emit('update:modelValue', this.content);
     },
   },
 }

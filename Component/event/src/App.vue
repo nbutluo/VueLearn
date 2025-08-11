@@ -10,7 +10,8 @@
   </div>
   <!--  <hr>-->
   <!--  <hd-input :value="title" />-->
-  <HdInput v-model:value="title"/>
+<!--  <HdInput v-model:value="title"/>-->
+  <HdInput v-model="title"/>
   <!--  <br>-->
 
 
