@@ -4,8 +4,9 @@
     <h3 @dblclick="inputShow=true">
       <!--    <span @click="del" v-bind="$attrs">x</span>-->
       <!--    <span @click="$emit('del',lesson)">x</span>-->
-      <input v-if="inputShow" type="text"
-             v-model="lesson.title"
+      <input v-if="inputShow" type="text" id="lesson-input"
+             :value="lesson.title"
+             @input="$emit('update:modelValue',$event.target.value)"
              @blur="inputShow=false"
              @keyup.enter="inputShow=false"
       />
@@ -19,7 +20,7 @@
 
 <script>
 export default {
-  props: ['lesson'],
+  props: ['lesson','modelValue'],
   emits: {
     'update:modelValue': null,
     del(v) {
