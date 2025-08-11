@@ -12,6 +12,15 @@
       />
       <strong v-else> {{ lesson.title }}</strong>
     </h3>
+    <h3 @dblclick="inputPriceShow=true">
+      <input v-if="inputPriceShow" type="text" id="lesson-price-input"
+             :value="lesson.price"
+             @input="$emit('update:price',$event.target.value)"
+             @blur="inputPriceShow=false"
+             @keyup.enter="inputPriceShow=false"
+      />
+      <strong v-else> {{ lesson.price }}</strong>
+    </h3>
 
     <span @click="del">x</span>
 
@@ -20,9 +29,10 @@
 
 <script>
 export default {
-  props: ['lesson','modelValue'],
+  props: ['lesson', 'modelValue','price'],
   emits: {
     'update:modelValue': null,
+    'update:price': null,
     del(v) {
       console.log(v)
       if (/^\d+$/.test(v)) {
@@ -41,6 +51,7 @@ export default {
   data() {
     return {
       inputShow: false,
+      inputPriceShow: false,
     }
   },
 }
