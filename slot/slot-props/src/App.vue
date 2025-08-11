@@ -1,13 +1,13 @@
 <template>
-  <lesson v-for="lesson in lessons" :key="lesson.id" :lesson="lesson">
+  <lesson v-for="lesson in lessons" :key="lesson.id" :lesson="lesson" #default="{id}">
 <!--    <button @click="del(lesson)"> 删除</button>-->
 <!--    <template v-slot:default="slotProps">-->
 <!--      <template v-slot:default="{id,content}">-->
-          <template #default="{id,content}">
+<!--          <template #default="{id,content}">-->
 <!--      {{slotProps}}&#45;&#45;{{slotProps['id']}}-->
 <!--      {{id}}&#45;&#45;{{content}}-->
       <button @click="del(id)"> 删除</button>
-    </template>
+<!--    </template>-->
   </lesson>
 </template>
 
