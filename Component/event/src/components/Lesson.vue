@@ -1,8 +1,17 @@
 <template>
   <div>
     <img :src="lesson.preview" alt="lesson.title"/>
-    <!--    <span @click="del" v-bind="$attrs">x</span>-->
-<!--    <span @click="$emit('del',lesson)">x</span>-->
+    <h3 @dblclick="inputShow=true">
+      <!--    <span @click="del" v-bind="$attrs">x</span>-->
+      <!--    <span @click="$emit('del',lesson)">x</span>-->
+      <input v-if="inputShow" type="text"
+             v-model="lesson.title"
+             @blur="inputShow=false"
+             @keyup.enter="inputShow=false"
+      />
+      <strong v-else> {{ lesson.title }}</strong>
+    </h3>
+
     <span @click="del">x</span>
 
   </div>
@@ -12,21 +21,27 @@
 export default {
   props: ['lesson'],
   emits: {
+    'update:modelValue': null,
     del(v) {
       console.log(v)
       if (/^\d+$/.test(v)) {
         return true;
       }
       throw new Error('del emit 需要数值参数')
-    }
+    },
   },
   methods: {
     del() {
       if (confirm('确认删除吗？')) {
-        this.$emit('del',this.lesson.id);
+        this.$emit('del', this.lesson.id);
       }
+    },
+  },
+  data() {
+    return {
+      inputShow: false,
     }
-  }
+  },
 }
 </script>
 

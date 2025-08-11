@@ -1,6 +1,7 @@
 <template>
   <div class="lesson">
-    <lesson v-for="item in db" :lesson="item" @del="show"/>
+    <lesson v-for="item in db" :lesson="item" @del="show" />
+    {{db[0].title}}
     <!--    <input type="text" :value="title" @input="title = $event.target.value">-->
     <!--    <input type="text" :value="title" @input="input">-->
     <!--    {{title}}-->
@@ -11,11 +12,12 @@
   <!--  <hr>-->
   <!--  <hd-input :value="title" />-->
 <!--  <HdInput v-model:value="title"/>-->
-  <HdInput v-model="title"/>
-  <!--  <br>-->
+<!--  <HdInput v-model="title"/>-->
+<!--  &lt;!&ndash;  <br>&ndash;&gt;-->
 
 
-  父组件: {{ title }}
+<!--  父组件: {{ title }}-->
+
 </template>
 
 <script>
