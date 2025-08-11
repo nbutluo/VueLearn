@@ -1,6 +1,6 @@
 <template>
   <div class="lesson">
-    <lesson v-for="item in db" :lesson="item" @del="show(item)"/>
+    <lesson v-for="item in db" :lesson="item" @del="show"/>
   </div>
 </template>
 
@@ -22,10 +22,10 @@ export default {
       const index = this.db.findIndex(l => l.id == item.id);
       this.db.splice(index, 1)
     },
-    show(item) {
-      const index = this.db.findIndex(l => l.id == item.id);
+    show(id) {
+      const index = this.db.findIndex(l => l.id == id);
+      console.log(index)
       this.db.splice(index, 1)
-      console.log(item)
     }
   }
 

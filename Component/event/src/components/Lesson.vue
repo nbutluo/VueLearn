@@ -11,10 +11,20 @@
 <script>
 export default {
   props: ['lesson'],
-  emits: ['del'],
+  emits: {
+    del(v) {
+      console.log(v)
+      if (/^\d+$/.test(v)) {
+        return true;
+      }
+      throw new Error('del emit 需要数值参数')
+    }
+  },
   methods: {
     del() {
-      this.$emit('del',this.lesson);
+      if (confirm('确认删除吗？')) {
+        this.$emit('del',this.lesson.id);
+      }
     }
   }
 }
