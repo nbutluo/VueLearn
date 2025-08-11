@@ -2,6 +2,7 @@
   <div>
     {{ lesson.title }}
     <slot :content="lesson.title" :id="lesson.id"/>
+    <slot name="icon" />
   </div>
 </template>
 
