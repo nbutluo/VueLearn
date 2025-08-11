@@ -1,6 +1,9 @@
 <template>
   <div>
-    <button>向军大叔的按钮</button>
+    <button>
+<!--      <slot/>-->
+      <slot>保存</slot>
+    </button>
   </div>
 </template>
 

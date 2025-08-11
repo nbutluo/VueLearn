@@ -9,7 +9,9 @@
     <!--    </card>-->
 
     <card :content="content">
-      <div @click="show">插槽</div>
+<!--      <div @click="show">插槽</div>-->
+<!--      <hd-button>保存</hd-button>-->
+      <hd-button>提交</hd-button>
     </card>
   </div>
 </template>
