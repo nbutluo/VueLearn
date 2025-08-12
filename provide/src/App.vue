@@ -6,8 +6,10 @@
       {{ component.title }}
     </div>
   </main>
+  <button @click="callFunc">调用组件</button>
+<!--  <input type="text" ref="input">-->
   <keep-alive>
-    <component :is="currentComponent"/>
+    <component :is="currentComponent" ref="component"/>
   </keep-alive>
 </template>
 
@@ -19,6 +21,17 @@ import {computed} from "vue";
 import config from "./config.js";
 
 export default {
+  methods:{
+    callFunc(){
+      // console.log(this.$refs.input);
+
+      // this.$refs.input.value = "后盾人";
+      console.log(this.$refs.component)
+
+      this.$refs.component.show();
+    }
+
+  },
   // provide:{
   //   webName:'后盾人',
   // },

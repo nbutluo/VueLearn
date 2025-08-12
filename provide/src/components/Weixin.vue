@@ -24,6 +24,11 @@ export default {
     return {
       content:'向军老师'
     }
+  },
+  methods:{
+    show() {
+      alert("这是微信组件")
+    }
   }
 }
 </script>
