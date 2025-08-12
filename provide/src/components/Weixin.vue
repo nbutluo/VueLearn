@@ -6,7 +6,9 @@
     <div>
       <x-input title="微信号" v-model="appName"/>
     </div>
+    {{teacher}}
   </card>
+
 </template>
 
 <script>
