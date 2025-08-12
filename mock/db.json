@@ -1,0 +1,71 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": "6150",
+      "auth": "邱奕泽",
+      "title": "之西响。"
+    },
+    {
+      "id": "6745",
+      "auth": "席梓睿",
+      "title": "连表积音规同省正年。"
+    },
+    {
+      "id": "04c0",
+      "auth": "东国珍",
+      "title": "情力本属建回。"
+    },
+    {
+      "id": "68c2",
+      "auth": "忻呈轩",
+      "title": "称相状整决工细安单头。"
+    },
+    {
+      "id": "3ae5",
+      "auth": "闵宇泽",
+      "title": "基圆重老。"
+    },
+    {
+      "id": "a197",
+      "auth": "范姜振东",
+      "title": "写节处何之情。"
+    },
+    {
+      "id": "e996",
+      "auth": "阎波",
+      "title": "劳计日始指它。"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "news": [
+    {
+      "id": "1",
+      "content": "后盾人"
+    },
+    {
+      "id": "a4fb"
+    },
+    {
+      "id": "bb9a",
+      "content": "data-warehouse invoice"
+    },
+    {
+      "id": "25bc",
+      "content": "invoice"
+    }
+  ]
+}
