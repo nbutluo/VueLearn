@@ -4,16 +4,23 @@
       微信
     </template>
     <div>
-      支付的表单
+      <x-input title="微信号" v-model="appName"/>
     </div>
   </card>
 </template>
 
 <script>
 import Card from "./Card.vue";
+import XInput from "./XInput.vue";
 
 export default {
-  components: {Card},
+  components: {XInput, Card},
+  data() {
+    return {
+      appName:"向军大叔",
+      price:23
+    }
+  }
 }
 </script>
 
