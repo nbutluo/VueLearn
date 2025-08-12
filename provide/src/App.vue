@@ -1,12 +1,11 @@
 <template>
   <main>
     <div v-for="component in components" :key="component.name"
+         :class="{ active: component.name == currentComponent }"
          @click="currentComponent = component.name">
       {{ component.title }}
     </div>
   </main>
-  {{ currentComponent }}
-
   <component :is="currentComponent"/>
 
 </template>
@@ -43,12 +42,17 @@ export default {
 <style lang="scss" scoped>
 main {
   display: flex;
-
+  margin-bottom: 15px;
   div {
-    border: 1px solid #dddddd;
+    border: solid 1px #ddd;
     padding: 10px;
-    margin: 5px 10px;
+    margin-right: 20px;
     cursor: pointer;
+    transition: 0.5s;
+    &.active {
+      background: #16a085;
+      color: #fff;
+    }
   }
 }
 </style>

@@ -1,17 +1,22 @@
 <template>
-  <div>
-    微信
-  </div>
+  <card>
+    <template v-slot:header>
+      微信
+    </template>
+    <div>
+      支付的表单
+    </div>
+  </card>
 </template>
 
 <script>
-export default {}
+import Card from "./Card.vue";
+
+export default {
+  components: {Card},
+}
 </script>
 
 <style lang="scss" scoped>
-div {
-  border: 1px solid #bbbb;
-  padding: 10px;
-  margin-bottom: 10px;
-}
+
 </style>
