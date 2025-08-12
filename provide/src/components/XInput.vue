@@ -3,7 +3,7 @@
     <label>
       <div>{{title}}</div>
       <input v-model="content" />
-      {{content}}
+<!--      {{content}}-->
     </label>
 
   </div>

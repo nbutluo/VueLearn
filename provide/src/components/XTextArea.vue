@@ -6,7 +6,7 @@
                 @input="$emit('update:modelValue',$event.target.value)"
                 :rows="rowLine"
       ></textarea>
-      {{ content }}
+<!--      {{ content }}-->
     </label>
 
   </div>

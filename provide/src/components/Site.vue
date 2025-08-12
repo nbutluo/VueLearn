@@ -1,13 +1,14 @@
 <template>
   <card>
     <template v-slot:header>
-      微信
+      站点信息
     </template>
     <div>
-      <x-input title="appid" v-model="config.wexin.appid"/>
-      <x-textarea  title="secret" v-model="config.wexin.secret"/>
+      <x-input title="网站名称" v-model="config.site.title"/>
+      <x-textarea  title="网站介绍" v-model="config.site.desc"/>
     </div>
   </card>
+  {{config}}
 
 </template>
 
@@ -17,7 +18,7 @@ import XInput from "./XInput.vue";
 import XTextarea from "./XTextArea.vue";
 
 export default {
-  inject: ['config'],
+  inject: ['config',],
   components: {XTextarea, XInput, Card},
 }
 </script>

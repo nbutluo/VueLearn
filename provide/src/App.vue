@@ -12,7 +12,9 @@
 <script>
 import Weixin from "./components/Weixin.vue";
 import Pay from "./components/Pay.vue";
+import Site from "./components/Site.vue";
 import {computed} from "vue";
+import config from "./config.js";
 
 export default {
   // provide:{
@@ -21,15 +23,17 @@ export default {
   provide() {
     return {
       webName: '后盾人',
-      teacher: computed(()=>this.teacher),  // 如果是从 data中获取值进行传递，则应该按照这种写法
+      teacher: computed(() => this.teacher),  // 如果是从 data中获取值进行传递，则应该按照这种写法
+      config:this.config,
     }
   },
   components: {
-    Weixin, Pay,
+    Weixin, Pay, Site,
 
   },
   data() {
     return {
+      config,
       teacher: '玛利亚',
       currentComponent: 'weixin',
       components: [
@@ -40,6 +44,10 @@ export default {
         {
           name: 'pay',
           title: '在线支付',
+        },
+        {
+          name: 'site',
+          title: '站点配置',
         },
 
       ],
