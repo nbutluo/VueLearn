@@ -7,8 +7,6 @@
     </div>
   </main>
   <component :is="currentComponent"/>
-
-  <input type="text" v-model="teacher">{{ teacher }}
 </template>
 
 <script>

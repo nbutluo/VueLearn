@@ -5,8 +5,8 @@
     </template>
     <div>
       <x-input title="微信号" v-model="appName"/>
+      <x-textarea  title="文本内容"/>
     </div>
-    {{teacher}}
   </card>
 
 </template>
@@ -14,10 +14,11 @@
 <script>
 import Card from "./Card.vue";
 import XInput from "./XInput.vue";
+import XTextarea from "./XTextArea.vue";
 
 export default {
   inject: ['webName', 'teacher'],
-  components: {XInput, Card},
+  components: {XTextarea, XInput, Card},
   data() {
     return {
       appName: "向军大叔",
