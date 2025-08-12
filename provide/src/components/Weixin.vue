@@ -6,6 +6,7 @@
     <div>
       <x-input title="appid" v-model="config.wexin.appid"/>
       <x-textarea  title="secret" v-model="config.wexin.secret"/>
+      <x-input title="老师" v-model="content"/>
     </div>
   </card>
 
@@ -19,6 +20,11 @@ import XTextarea from "./XTextArea.vue";
 export default {
   inject: ['config'],
   components: {XTextarea, XInput, Card},
+  data() {
+    return {
+      content:'向军老师'
+    }
+  }
 }
 </script>
 

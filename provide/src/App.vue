@@ -6,7 +6,9 @@
       {{ component.title }}
     </div>
   </main>
-  <component :is="currentComponent"/>
+  <keep-alive>
+    <component :is="currentComponent"/>
+  </keep-alive>
 </template>
 
 <script>
