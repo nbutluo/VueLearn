@@ -13,14 +13,25 @@
 <script>
 import Weixin from "./components/Weixin.vue";
 import Pay from "./components/Pay.vue";
+import {computed} from "vue";
 
 export default {
+  // provide:{
+  //   webName:'后盾人',
+  // },
+  provide() {
+    return {
+      webName:'后盾人',
+      teacher: this.teacher  // 如果是从 data中获取值进行传递，则应该按照这种写法
+    }
+  },
   components: {
     Weixin, Pay,
 
   },
   data() {
     return {
+      teacher:'向军',
       currentComponent: 'weixin',
       components: [
         {

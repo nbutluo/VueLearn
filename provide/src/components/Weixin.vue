@@ -14,13 +14,14 @@ import Card from "./Card.vue";
 import XInput from "./XInput.vue";
 
 export default {
+  inject: ['webName', 'teacher'],
   components: {XInput, Card},
   data() {
     return {
-      appName:"向军大叔",
-      price:23
+      appName: "向军大叔",
+      price: 23,
     }
-  }
+  },
 }
 </script>
 
