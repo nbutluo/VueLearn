@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button>-</button>
+    <button @click="sub">-</button>
     {{ num }}
     <button @click="add">+</button>
   </div>
@@ -8,7 +8,7 @@
 
 <script>
 
-import {ref} from "vue";
+import {ref, watch} from "vue";
 
 export default {
   setup() {
@@ -19,12 +19,29 @@ export default {
       num.value = num.value + 1;
     }
 
-    return {num,add}
+    let sub = () => {
+      num.value--
+    }
+
+    watch(num, (v) => {
+      if (v <= 0) {
+        num.value = 0
+      }
+    })
+
+    return {num, add, sub}
   },
   // methods: {
   //   add() {
   //     console.log(this.num)
   //     this.num++;
+  //   },
+  // },
+  // watch: {
+  //   num(v) {
+  //     if (v <= 0) {
+  //       this.num = 0;
+  //     }
   //   },
   // },
 }
