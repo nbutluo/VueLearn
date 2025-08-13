@@ -8,7 +8,7 @@
 
 <script>
 
-import {ref, watch} from "vue";
+import {ref, watch, watchEffect} from "vue";
 
 export default {
   setup() {
@@ -23,12 +23,20 @@ export default {
       num.value--
     }
 
-    watch(num, (v) => {
-      if (v <= 0) {
-        num.value = 0
-      }
-    })
+    // watch(num, (v) => {
+    //   if (v <= 0) {
+    //     num.value = 0
+    //   }
+    // })
 
+    const stop = watchEffect(() => {
+      console.log(num.value)
+      if (num.value <= 0) {
+        num.value = 0;
+      }
+    });
+
+    // stop();
     return {num, add, sub}
   },
   // methods: {
