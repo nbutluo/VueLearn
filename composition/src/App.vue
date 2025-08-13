@@ -1,6 +1,6 @@
 <template>
   <div>
-    <count />
+    <count :init="3"/>
   </div>
 </template>
 

@@ -11,8 +11,14 @@
 import {ref, watch, watchEffect} from "vue";
 
 export default {
-  setup() {
-    let num = ref(2);
+  props: {
+    init: {
+      type: Number,
+      default: 1,
+    },
+  },
+  setup(props) {
+    let num = ref(props.init);
 
     let add = () => {
       console.log(num)
