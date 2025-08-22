@@ -17,16 +17,20 @@ export default {
       default: 1,
     },
   },
-  setup(props) {
+  emits: ['change'],
+  setup(props, context) {
+
+    const {emit} = context;
     let num = ref(props.init);
 
     let add = () => {
-      console.log(num)
       num.value = num.value + 1;
+      emit('change', num.value)
     }
 
     let sub = () => {
       num.value--
+      emit('change', num.value)
     }
 
     // watch(num, (v) => {
@@ -36,10 +40,11 @@ export default {
     // })
 
     const stop = watchEffect(() => {
-      console.log(num.value)
+      // console.log(num.value)
       if (num.value <= 0) {
         num.value = 0;
       }
+      emit('change', num.value)
     });
 
     // stop();
